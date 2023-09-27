@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Task{% endblock %}
+
+{% block body %}
+    <h1>VOTRE TACHE</h1>
+
+    <table class="table" id="tacheDetail">
+        <tbody>
+        <tr>
+            <th>Numero</th>
+            <td>{{ task.id }}</td>
+        </tr>
+        <tr>
+            <th>Titre</th>
+            <td>{{ task.titre }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ task.description }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ task.status }}</td>
+        </tr>
+        <tr>
+            <th>Created_at</th>
+            <td>{{ task.createdAt ? task.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="btnDetails">
+        <a class="detailsbtn" href="{{ path('app_task_index') }}">RETOUR A LA LISTE</a>
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a class="detailsbtn" href="{{ path('app_task_edit', {'id': task.id}) }}">EDITER</a>
+        {% else %}
+            <a class="detailsbtn" href="{{ path('app_login') }}">EDITER (se coonecter)</a>
+        {% endif %}
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <div id="deleteTaches">{{ include('task/_delete_form.html.twig') }}</div>
+        {% else %}
+            {# Redirection vers la page de connexion, par exemple #}
+            {% set redirectionUrl = path('app_login') %}
+        {% endif %}
+    </div>
+{% endblock %}

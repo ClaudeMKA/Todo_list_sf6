@@ -1,0 +1,465 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center; /* Centre les éléments horizontalement */
+    margin-bottom: 3rem;
+}
+
+#mainHome {
+    text-align: center;
+    margin: auto;
+}
+
+.example-wrapper {
+    padding: 8rem 0rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s; /* Transition pour l'effet de survol */
+}
+
+/* Effet de survol (hover) pour les liens */
+nav a:hover {
+    color: #ff6600; /* Change la couleur au survol */
+}
+
+/* Styles pour les écrans de petite taille (mobile) */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Styles pour le formulaire avec l'ID userLogin */
+#userLogin form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    margin-top: 2rem;
+}
+
+#userLogin h1 {
+    text-align: center;
+}
+
+#userLogin label {
+    font-weight: bold;
+}
+
+#userLogin .form-control {
+    width: 95%; /* Ajusté à 100% pour occuper toute la largeur */
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#userLogin .btn {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#userLogin .btn:hover {
+    background-color: #0056b3;
+}
+
+#userLogin .alert {
+    margin-top: 10px;
+}
+
+/* Styles pour rendre le formulaire responsive */
+@media screen and (max-width: 600px) {
+    #userLogin form {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #userLogin .form-control {
+        padding: 8px;
+    }
+}
+
+
+
+
+/* Styles pour le formulaire avec l'ID userNew */
+#userNew form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    margin-top: 2rem;
+}
+
+#userNew h1 {
+    text-align: center;
+}
+
+#userNew label {
+    font-weight: bold;
+    display: block;
+}
+
+#userNew input {
+    display: block;
+    width: 95%;
+    margin-bottom: 1rem;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#userNew .form-control {
+    width: 100%; /* Ajusté à 100% pour occuper toute la largeur */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#userNew .btn {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#userNew .btn:hover {
+    background-color: #0056b3;
+}
+
+#userNew .alert {
+    margin-top: 10px;
+}
+
+/* Styles pour rendre le formulaire responsive */
+@media screen and (max-width: 600px) {
+    #userNew form {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #userNew .form-control {
+        padding: 8px;
+    }
+}
+
+/* Styles pour le footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-md-4 {
+    width: 33.33%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff6600;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-md-4 {
+        width: 100%;
+    }
+}
+
+#tableTaches {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+}
+
+#tableTaches th,
+#tableTaches td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#tableTaches th {
+    background-color: #f2f2f2;
+}
+
+#tableTaches tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tableTaches tr:hover {
+    background-color: #ddd;
+}
+
+#tableTaches td a {
+    text-decoration: none;
+    padding: 4px 8px;
+    margin-right: 4px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 4px;
+}
+
+#tableTaches td a:hover {
+    background-color: #ddd;
+}
+
+#addTaches {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: block;
+    width: 40%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#addTaches:hover {
+    background-color: #0056b3;
+}
+
+#newTaches {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 400px; /* Pour limiter la largeur du formulaire */
+    margin: 0 auto; /* Pour centrer le formulaire horizontalement */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#newTaches label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#newTaches input[type="text"], #newTaches select, #newTaches input[type="datetime-local"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#newTaches select {
+    height: 40px; /* Hauteur personnalisée pour les menus déroulants */
+    width: 100%;
+}
+
+#newTaches .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#newTaches .btn:hover {
+    background-color: #0056b3;
+}
+
+#tacheDetail {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px; /* Pour limiter la largeur de la table */
+    margin: 0 auto; /* Pour centrer la table horizontalement */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#tacheDetail th,
+#tacheDetail td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#tacheDetail th {
+    background-color: #f2f2f2;
+}
+
+.detailsbtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.detailsbtn:hover {
+    background-color: #0056b3;
+}
+
+#deleteTaches {
+    margin-top: 20px;
+}
+
+#btnDetails {
+    display: block;
+    margin: auto;
+    width: 900px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#backNew {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: auto;
+    width: 200px;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+#backNew:hover {
+    background-color: #0056b3;
+}
+
+#editTaches a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#editTaches a:hover {
+    background-color: #0056b3;
+}
+
+#editTaches {
+    width: 900px;
+    margin-top: 2rem !important;
+    margin: auto;
+    text-align-last: center;
+}
+
+
+
+
+
+
+

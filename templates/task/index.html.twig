@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Task index{% endblock %}
+
+{% block body %}
+    <h1 class="home">BIENVENUE SUR LES LISTES DES TÂCHES</h1>
+
+
+    <table class="table" id="tableTaches">
+        <thead>
+        <tr>
+            <th>Numero</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Date de creation</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.titre }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.status }}</td>
+                <td>{{ task.createdAt ? task.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_task_show', {'id': task.id}) }}">EN VOIR +</a>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <a href="{{ path('app_task_edit', {'id': task.id}) }}">EDITER</a>
+                    {% else %}
+                        <a href="{{ path('app_login') }}">EDITER (se connecter)</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a id="addTaches" href="{{ path('app_task_new') }}">AJOUTER UNE TACHE</a>
+{% endblock %}
